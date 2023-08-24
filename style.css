@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #adb5bd;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  height: 75%;
+  width: 30%;
+  border-radius: 24px;
+  padding: 2.4rem 3.2rem;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 3px 10px 1.5px rgb(0 0 0 / 2.5);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgb(170, 170, 170, 0.3);
+}
+.change-mode {
+  display: flex;
+  justify-content: center;
+}
+.light-mode,
+.dark-mode {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  border: none;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+.light-mode {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.dark-mode {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.mode {
+  padding: 0.2rem 1.4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.screen {
+  width: 100%;
+  height: 4.8rem;
+  font-size: 2.4rem;
+  border-radius: 9px;
+  padding: 1rem;
+  background-color: #ddd;
+  border: none;
+  text-align: right;
+  cursor: not-allowed;
+  outline: none;
+  margin-bottom: 2.4rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.main {
+  gap: 1.2rem;
+}
+.btn {
+  background: #000000;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.icon {
+  width: 100%;
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 1.2rem 0.8rem;
+}
+.btn:last-child .icon {
+  width: auto;
+  padding: 0.8rem 1.5rem;
+  background-color: orangered;
+  border-radius: 50%;
+}
+.icon:hover {
+  transform: scale(1.4);
+  color: orangered;
+}
+.btn:last-child .icon:hover {
+  transform: scale(1);
+  color: #fff;
+}
+.orange {
+  color: orangered !important;
+}
+.black {
+  color: #000;
+}
+.background-change {
+  background-color: transparent;
+}
+.active {
+  background-color: #ced4da;
+  color: #000000;
+  border-radius: 15px;
+}
+.active .mode {
+  color: #000;
+}
